@@ -1,0 +1,85 @@
+services:
+  veris-core:
+    image: avonill/veris-core:latest
+    env_file: .env
+    container_name: veris-core
+    ports:
+      - "9000:9000"
+    networks:
+      - veris-network
+    depends_on:
+      - mongodb
+      - redis
+    restart: always
+
+  veris-api:
+    image: avonill/veris-api:latest
+    container_name: veris-api
+    ports:
+      - "3000:3000"
+    env_file: .env
+    networks:
+      - veris-network
+    depends_on:
+      - veris-core
+    restart: always
+
+  veris-telegram-bot:
+    image: avonill/veris-telegram-bot:latest
+    container_name: veris-telegram-bot
+    env_file: .env
+    command: ["python3", "-u", "main.py"]
+    networks:
+      - veris-network
+    depends_on:
+      - veris-core
+    restart: always
+
+  veris-twitch-bot:
+    image: avonill/veris-twitch-bot:latest
+    container_name: veris-twitch-bot
+    env_file: .env
+    command: ["python3", "-u", "main.py"]
+    networks:
+      - veris-network
+    depends_on:
+      - veris-core
+    restart: always
+
+  veris-discord-bot:
+    image: avonill/veris-discord-bot:latest
+    container_name: veris-discord-bot
+    env_file: .env
+    command: ["python3", "-u", "main.py"]
+    networks:
+      - veris-network
+    depends_on:
+      - veris-core
+    restart: always
+
+  mongodb:
+    container_name: mongodb # Фіксуємо ім'я для зручності
+    image: mongo:latest
+    networks:
+      - veris-network
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+  redis:
+    container_name: redis
+    image: redis:alpine
+    networks:
+      - veris-network
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
+
+networks:
+  veris-network:
+    driver: bridge

@@ -1,0 +1,35 @@
+# Git files
+.git/
+.gitignore
+.dockerignore
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE configuration
+.idea/
+.vscode/
+*.suo
+*.user
+*.sln
+
+# Global config file
+setup.cfg
+
+# Log files
+*.log
+logs/
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+
+# Don't include the entire app directory in other builds
+app/

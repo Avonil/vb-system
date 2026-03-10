@@ -1,0 +1,82 @@
+services:
+  # 1. База даних (Відкрита для MongoDB Compass)
+  mongodb:
+    image: mongo:latest
+    container_name: veris-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+  # 2. Redis
+  redis:
+    image: redis:alpine
+    container_name: veris-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  # 3. Go Ядро
+  veris-core:
+    build: ./core # Заміни на свою назву папки з Ядром
+    container_name: veris-core
+    ports:
+      - "9000:9000"
+    env_file:
+      - ./core/.env
+    depends_on:
+      - mongodb
+      - redis
+    restart: unless-stopped
+
+  # 4. Elysia API
+  veris-api:
+    build: ./api # Заміни на свою назву папки з API
+    container_name: veris-api
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./api/.env
+    depends_on:
+      - mongodb
+      - veris-core
+    restart: unless-stopped
+
+  # 5. Twitch Bot
+  twitch-bot:
+    build: ./twitch-bot # Заміни на свою назву папки
+    container_name: veris-twitch-bot
+    command: ["python", "main.py"]
+    env_file:
+      - ./twitch-bot/.env
+    depends_on:
+      - veris-core
+    restart: unless-stopped
+
+  # 6. Discord Bot
+  discord-bot:
+    build: ./discord-bot # Заміни на свою назву папки
+    container_name: veris-discord-bot
+    command: ["python", "main.py"]
+    env_file:
+      - ./discord-bot/.env
+    depends_on:
+      - veris-core
+      - redis
+    restart: unless-stopped
+
+  # 7. Telegram Bot
+  telegram-bot:
+    build: ./telegram-bot # Заміни на свою назву папки
+    container_name: veris-telegram-bot
+    command: ["python", "main.py"]
+    env_file:
+      - ./telegram-bot/.env
+    depends_on:
+      - veris-core
+      - redis
+    restart: unless-stopped
+
+volumes:
+  mongo_data:

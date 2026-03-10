@@ -1,0 +1,12 @@
+# Compiled Object files, builds, and executables
+*.o
+*.a
+*.exe
+*.exe~
+*test
+# Local packages
+/bin
+.env
+# Dependency directories
+/vendor/
+Godeps/
