@@ -1,24 +1,129 @@
-RESTRICTED PERSONAL USE PROPRIETARY LICENSE
+VERIS PERSONAL SOURCE LICENSE
+Version 1.0
+
 Copyright (c) 2026 Avonil
-All Rights Reserved.
 
-1. GRANT OF LICENSE
-Subject to the terms and conditions of this License, the Author (Avonil) hereby grants you a personal, non-exclusive, non-transferable, and limited right to:
-a) Download, install, and use the Software ("vb-system") exclusively for your personal, private, and internal purposes.
-b) Fork the repository and modify the source code, provided that such modifications are made strictly for your own personal use.
+This license governs the use of the VB-System software and source code.
 
-2. RESTRICTIONS ON USE AND DISTRIBUTION
-You are explicitly and unconditionally PROHIBITED from:
-a) Redistribution: Distributing, sharing, publishing, sublicensing, or otherwise making the Software or any of its modified versions available to any third party. The Software may not be offered, uploaded, or distributed as a free resource, open-source project, or commercial product under any circumstances.
-b) Public Availability: Making your modified versions (forks) publicly accessible. If you fork or clone the repository to modify it, you must ensure that your repository remains entirely private.
-c) Contributions: Submitting modified versions, patches, features, or derivatives back to the original project repository as public contributions (e.g., via Pull Requests), or distributing them elsewhere as an alternative or "community" version.
-d) Commercial Use: Using the Software, original or modified, for direct commercial gain, offering it as a service to others (SaaS), or embedding it within a commercial product.
+By using, copying, or modifying this Software, you agree to the terms of this License.
 
-3. OWNERSHIP AND INTELLECTUAL PROPERTY
-The Author retains all right, title, and interest in and to the Software, including all intellectual property rights therein. This License is not a sale and does not convey any rights of ownership in or to the Software. Modifications made by you do not transfer ownership of the original underlying source code.
+--------------------------------------------------------------------
 
-4. DISCLAIMER OF WARRANTY
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+1. DEFINITIONS
 
-5. TERMINATION
-This License is effective until terminated. Your rights under this License will terminate automatically without notice from the Author if you fail to comply with any term(s) of this License. Upon termination, you must cease all use of the Software and destroy all copies, full or partial, of the Software.
+"Software" means the VB-System project, including its source code,
+documentation, configuration files, build scripts, and related assets.
+
+"Author" means the copyright holder of the Software.
+
+"User" means any individual or entity obtaining access to the Software.
+
+"Personal Use" means private use by the User for their own purposes,
+without providing the Software or its functionality to third parties.
+
+--------------------------------------------------------------------
+
+2. LICENSE GRANT
+
+Subject to the terms of this License, the Author grants the User a
+limited, non-exclusive, non-transferable, non-sublicensable license to:
+
+• View and study the Software source code.
+• Run the Software.
+• Modify the Software.
+• Create private forks of the Software.
+• Use the Software for Personal Use only.
+
+--------------------------------------------------------------------
+
+3. PERMITTED MODIFICATIONS
+
+Users may modify the Software and maintain private forks for internal
+use only.
+
+Modified versions must remain private and may not be shared,
+distributed, or published.
+
+--------------------------------------------------------------------
+
+4. RESTRICTIONS
+
+The following actions are strictly prohibited unless explicit written
+permission is granted by the Author.
+
+4.1 Redistribution
+
+You may not distribute, publish, sublicense, sell, rent, lease, host,
+or otherwise make the Software or any derivative work available to
+third parties.
+
+4.2 Public Repositories
+
+You may not publish the Software or any modified version of it in a
+public repository, code hosting service, or distribution platform.
+
+This includes but is not limited to GitHub, GitLab, Bitbucket, and
+similar services.
+
+4.3 Commercial Use
+
+You may not use the Software, or any derivative work based on it,
+for commercial purposes.
+
+This includes but is not limited to:
+
+• Selling software products based on the Software
+• Providing paid services using the Software
+• Running hosted services using the Software
+• Including the Software in commercial offerings
+
+4.4 Contributions
+
+External contributions to the Software are not accepted.
+
+Users may not submit pull requests, patches, or derivative code for
+inclusion into the original project unless explicitly requested by the
+Author.
+
+4.5 Software as a Service
+
+You may not deploy the Software in a way that allows third parties
+to access its functionality over a network.
+
+--------------------------------------------------------------------
+
+5. OWNERSHIP
+
+The Software is licensed, not sold.
+
+All rights, title, and interest in the Software remain with the Author.
+
+--------------------------------------------------------------------
+
+6. TERMINATION
+
+This License automatically terminates if you violate any of its terms.
+
+Upon termination you must immediately stop using the Software and
+delete all copies in your possession.
+
+--------------------------------------------------------------------
+
+7. DISCLAIMER OF WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED.
+
+THE AUTHOR SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
+
+--------------------------------------------------------------------
+
+8. GOVERNING LAW
+
+This License shall be governed by the applicable laws of the
+jurisdiction of the Author.
+
+--------------------------------------------------------------------
+
+END OF TERMS
